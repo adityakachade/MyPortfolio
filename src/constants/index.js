@@ -110,7 +110,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "Redux",
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
@@ -130,11 +130,11 @@ const projects = [
       "A Khan Academy-inspired learning platform featuring interactive video lessons, practice exercises, and personalized progress tracking. Built with React, Node.js, and MongoDB, it delivers engaging education with real-time feedback and achievement badges.",
     tags: [
       {
-        name: "React",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "Node.js",
+        name: "JS",
         color: "green-text-gradient",
       },
       {
