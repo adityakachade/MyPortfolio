@@ -91,7 +91,7 @@ const technologies = [
     icon: "https://mern-rajesh-portfolio.web.app/assets/tech/git.png",
   },
   {
-    name: "GitHup",
+    name: "GitHub",
     icon: "https://mern-rajesh-portfolio.web.app/assets/github.png",
   },
   
