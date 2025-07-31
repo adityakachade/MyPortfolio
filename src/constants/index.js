@@ -66,10 +66,10 @@ const technologies = [
     icon: "https://mern-rajesh-portfolio.web.app/assets/tech/material-ui.png",
   },
 
-  {
-    name: "Scss",
-    icon: "https://mern-rajesh-portfolio.web.app/assets/tech/scss.png",
-  },
+  // {
+  //   name: "Scss",
+  //   icon: "https://mern-rajesh-portfolio.web.app/assets/tech/scss.png",
+  // },
   {
     name: "Node JS",
     icon: "https://mern-rajesh-portfolio.web.app/assets/tech/nodejs.png",
