@@ -8,15 +8,16 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
 const Contact = () => {
-  const downloadResume = e => {
-    e.preventDefault();
-    const link = document.createElement('a');
-link.href = 'https://drive.google.com/uc?export=download&id=1zjQJTqtqj9BNR7Ze7KGGWXC3Fa2AaB_a';
-    link.setAttribute('download','Aditya_resume.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const downloadResume = (e) => {
+  e.preventDefault();
+  const link = document.createElement('a');
+  link.href = 'https://drive.google.com/uc?export=download&id=1A00WY0cmyn1fWhMwWF07ndFMDhtJxNfr';
+  link.setAttribute('download', 'Aditya_resume.pdf');
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <>
