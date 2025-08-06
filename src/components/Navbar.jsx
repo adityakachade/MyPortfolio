@@ -18,16 +18,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleResume = (e) => {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1A00WY0cmyn1fWhMwWF07ndFMDhtJxNfr';
-    link.setAttribute('download', 'Aditya_resume.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <nav
       className={`
@@ -73,12 +63,15 @@ const Navbar = () => {
 
           <li>
             <Button
-              onClick={handleResume}
+              component="a"
+              href="https://drive.google.com/file/d/1vnMCHwF38C2KsyvpkvI8TuSB3qwUN5dc/view"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="outlined"
               endIcon={<ArrowOutward />}
               className="!border-black dark:!border-white !text-black dark:!text-white"
             >
-              Resume
+              View Resume
             </Button>
           </li>
         </ul>
@@ -114,14 +107,18 @@ const Navbar = () => {
                     <a href={`#${nav.id}`}>{nav.title}</a>
                   </li>
                 ))}
+
                 <li>
                   <Button
-                    onClick={handleResume}
+                    component="a"
+                    href="https://drive.google.com/file/d/1vnMCHwF38C2KsyvpkvI8TuSB3qwUN5dc/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     variant="outlined"
                     endIcon={<ArrowOutward />}
                     className="!border-black dark:!border-white !text-black dark:!text-white w-full"
                   >
-                    Resume
+                    View Resume
                   </Button>
                 </li>
               </ul>

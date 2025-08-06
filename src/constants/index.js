@@ -62,7 +62,7 @@ const technologies = [
     icon: "https://mern-rajesh-portfolio.web.app/assets/tech/redux.png",
   },
   {
-    name: "Matirial UI",
+    name: "Material UI",
     icon: "https://mern-rajesh-portfolio.web.app/assets/tech/material-ui.png",
   },
 
