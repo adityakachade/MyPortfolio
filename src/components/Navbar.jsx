@@ -71,7 +71,7 @@ const Navbar = () => {
               endIcon={<ArrowOutward />}
               className="!border-black dark:!border-white !text-black dark:!text-white"
             >
-              View Resume
+             Resume
             </Button>
           </li>
         </ul>
