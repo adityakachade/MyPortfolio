@@ -79,7 +79,7 @@ const Contact = () => {
             endIcon={<ArrowOutward />}
             className="!border-black dark:!border-white !text-black dark:!text-white"
           >
-            View Resume
+             Resume
           </Button>
         </div>
       </div>
