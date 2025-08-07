@@ -33,7 +33,7 @@ const Contact = () => {
               },
               {
                 icon: <GitHub />,
-                href: 'https://github.com/adityakachade/adityakachade',
+                href: 'https://github.com/adityakachade',
                 label: 'GitHub',
               },
             ].map((b, i) => (
