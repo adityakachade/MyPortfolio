@@ -94,7 +94,7 @@ const technologies = [
     name: "GitHub",
     icon: "https://mern-rajesh-portfolio.web.app/assets/github.png",
   },
-  
+
 ];
 
 
@@ -123,6 +123,22 @@ const projects = [
     alt: "Agriai",
     source_code_link: "https://github.com/adityakachade/AgriAi",
     live_link: "https://agriaiapp.netlify.app/",
+  },
+  {
+    name: "FinanceTracker",
+    description:
+      "Money Manager is a personal finance app that helps users track income and expenses, visualize spending patterns, and manage their budgets effectively. Built with HTML, CSS, JavaScript, and Firebase, it features real-time data sync and responsive UI for all devices.",
+    tags: [
+      { name: "HTML5", color: "blue-text-gradient" },
+      { name: "CSS3", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      { name: "Firebase", color: "blue-text-gradient" },
+      { name: "Firestore", color: "green-text-gradient" },
+    ],
+    image: "FinanceTracker.png",
+    alt: "FinanceTracker",
+    source_code_link: "https://github.com/adityakachade/FinanceTracker",
+    live_link: "https://trackthefinance.netlify.app/",
   },
   {
     name: "KhanAcademy",
@@ -173,13 +189,13 @@ const projects = [
     source_code_link: "https://github.com/adityakachade/NearbyEats/tree/main/restaurant",
     live_link: "https://nearbyeats.netlify.app/",
   },
- 
+
 ];
 
 export {
   navLinks,
   services,
-  technologies,  
+  technologies,
   projects,
-  
+
 };

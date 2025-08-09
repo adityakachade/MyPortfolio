@@ -12,11 +12,28 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // 🔁 Scroll effect
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // ✅ Resume click handler: open + download
+  const handleResumeClick = () => {
+    const fileUrl = '/Aditya-Kachade-Resume.pdf';
+
+    // Open in new tab
+    window.open(fileUrl, '_blank');
+
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Aditya-Kachade-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <nav
@@ -39,7 +56,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* ✅ Desktop Nav */}
         <ul className="hidden list-none items-center gap-10 md:flex">
           {navLinks.map((nav) => (
             <li
@@ -61,22 +78,20 @@ const Navbar = () => {
             </IconButton>
           </li>
 
+          {/* ✅ Unified Resume Button */}
           <li>
             <Button
-              component="a"
-              href="https://drive.google.com/file/d/1vnMCHwF38C2KsyvpkvI8TuSB3qwUN5dc/view"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleResumeClick}
               variant="outlined"
               endIcon={<ArrowOutward />}
               className="!border-black dark:!border-white !text-black dark:!text-white"
             >
-             Resume
+              Resume
             </Button>
           </li>
         </ul>
 
-        {/* Mobile Nav */}
+        {/* ✅ Mobile Nav */}
         <div className="relative flex items-center gap-2 md:hidden">
           <IconButton onClick={toggleTheme} className="!text-gray-800 dark:!text-white">
             {theme === 'dark' ? <Brightness7 /> : <Brightness4 />}
@@ -108,12 +123,13 @@ const Navbar = () => {
                   </li>
                 ))}
 
+                {/* ✅ Resume Button for Mobile */}
                 <li>
                   <Button
-                    component="a"
-                    href="https://drive.google.com/file/d/1vnMCHwF38C2KsyvpkvI8TuSB3qwUN5dc/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => {
+                      handleResumeClick();
+                      setOpen(false); // close the menu
+                    }}
                     variant="outlined"
                     endIcon={<ArrowOutward />}
                     className="!border-black dark:!border-white !text-black dark:!text-white w-full"

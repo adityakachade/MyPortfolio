@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@mui/material';
@@ -8,6 +7,21 @@ import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
 const Contact = () => {
+  const handleResumeClick = () => {
+    const fileUrl = '/Aditya-Kachade-Resume.pdf';
+
+    // Open resume in a new tab
+    window.open(fileUrl, '_blank');
+
+    // Create an invisible anchor to trigger download
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Aditya-Kachade-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div className="flex flex-col-reverse gap-10 overflow-hidden md:mt-12 md:flex-row">
@@ -70,16 +84,14 @@ const Contact = () => {
           Thanks for scrolling.
         </h1>
         <div className="flex gap-4">
+          {/* Single button to view and download resume */}
           <Button
-            component="a"
-            href="https://drive.google.com/file/d/1vnMCHwF38C2KsyvpkvI8TuSB3qwUN5dc/view"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleResumeClick}
             variant="outlined"
             endIcon={<ArrowOutward />}
             className="!border-black dark:!border-white !text-black dark:!text-white"
           >
-             Resume
+            Resume
           </Button>
         </div>
       </div>
